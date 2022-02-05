@@ -11,7 +11,7 @@ namespace AplusApp
         {
             InitializeComponent();
 
-            MainPage = new AuthPage();
+            MainPage = new NavigationPage(new AuthPage());
         }
 
         protected override void OnStart()

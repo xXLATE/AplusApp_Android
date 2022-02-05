@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplusApp.Pages.RegistrationPage">
+
+    <NavigationPage.TitleView>
+        <Label
+            Margin="-70, 0, 0, 0"
+            FontSize="20"
+            Text="Регистрация"
+            TextColor="White"
+            HorizontalOptions="Center"/>
+    </NavigationPage.TitleView>
+
+    <StackLayout Spacing="65" Margin="40, 50" >
+        <StackLayout>
+            <Label
+                Text="E-mail"
+                TextColor="black"/>
+            <Frame BorderColor="black" CornerRadius="0" >
+                <Entry
+                    x:Name="Mail"
+                    Margin="-23"
+                    HeightRequest="40" />
+            </Frame>
+        </StackLayout>
+
+        <StackLayout>
+            <Label
+                Text="Логин"
+                TextColor="black"/>
+            <Frame BorderColor="black" CornerRadius="0" >
+                <Entry
+                    x:Name="Login"
+                    Margin="-23"
+                    HeightRequest="40" />
+            </Frame>
+        </StackLayout>
+
+        <StackLayout>
+            <Label
+                Text="Пароль"
+                TextColor="black"/>
+            <Frame BorderColor="black" CornerRadius="0" >
+                <Entry
+                    x:Name="Password"
+                    Margin="-23"
+                    IsPassword="True"
+                    HeightRequest="40" />
+            </Frame>
+        </StackLayout>
+
+        <StackLayout>
+            <Label
+                Text="Пароль"
+                TextColor="black"/>
+            <Frame BorderColor="black" CornerRadius="0" >
+                <Entry
+                    x:Name="PasswordConfirm"
+                    Margin="-23"
+                    IsPassword="True"
+                    HeightRequest="40" />
+            </Frame>
+        </StackLayout>
+        
+        <Button
+            x:Name="RegistrationBtn"
+            FontSize="12"
+            Text="Зарегистрироваться"
+            TextTransform="None" />
+    </StackLayout>
+</ContentPage>

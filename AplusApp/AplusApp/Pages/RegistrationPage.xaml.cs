@@ -10,18 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace AplusApp.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AuthPage : ContentPage
+    public partial class RegistrationPage : ContentPage
     {
-        public AuthPage()
+        public RegistrationPage()
         {
             InitializeComponent();
-
-            NavigationPage.SetHasNavigationBar(this, false);
-        }
-
-        private async void RegistrationBtn_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new RegistrationPage());
         }
     }
 }

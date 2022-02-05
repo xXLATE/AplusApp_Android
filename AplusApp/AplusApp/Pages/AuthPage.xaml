@@ -13,9 +13,10 @@
             <Label
                 Text="Логин"
                 TextColor="black"/>
-            <Frame BorderColor="black" Padding="0" CornerRadius="0" >
+            <Frame BorderColor="black" CornerRadius="0" >
                 <Entry
                     x:Name="LoginEntry"
+                    Margin="-23"
                     HeightRequest="40" />
             </Frame>
         </StackLayout>
@@ -24,9 +25,10 @@
             <Label
                 Text="Пароль"
                 TextColor="black"/>
-            <Frame BorderColor="black" Padding="0" CornerRadius="0" >
+            <Frame BorderColor="black" CornerRadius="0" >
                 <Entry
                     x:Name="PasswordEntry"
+                    Margin="-23"
                     IsPassword="True"
                     HeightRequest="40"/>
             </Frame>
@@ -35,12 +37,14 @@
         <StackLayout Orientation="Horizontal">
             <Button
                 x:Name="RegistrationBtn"
+                TextTransform="None"
                 FontSize="10"
                 WidthRequest="140"
-                HorizontalOptions="StartAndExpand"
+                Clicked="RegistrationBtn_Clicked"
                 Text="Зарегистрироваться" />
             <Button
                 x:Name="LoginBtn"
+                TextTransform="None"
                 FontSize="10"
                 WidthRequest="140"
                 HorizontalOptions="EndAndExpand"
