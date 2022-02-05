@@ -1,5 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
+using AplusApp.Pages;
 using Xamarin.Forms.Xaml;
 
 namespace AplusApp
@@ -10,7 +11,7 @@ namespace AplusApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new AuthPage();
         }
 
         protected override void OnStart()
