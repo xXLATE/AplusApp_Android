@@ -47,6 +47,7 @@
                 TextTransform="None"
                 FontSize="10"
                 WidthRequest="140"
+                Clicked="LoginBtn_Clicked"
                 HorizontalOptions="EndAndExpand"
                 Text="Войти" />
         </StackLayout>

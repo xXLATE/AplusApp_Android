@@ -67,6 +67,7 @@
             x:Name="RegistrationBtn"
             FontSize="12"
             Text="Зарегистрироваться"
+            Clicked="RegistrationBtn_Clicked"
             TextTransform="None" />
     </StackLayout>
 </ContentPage>

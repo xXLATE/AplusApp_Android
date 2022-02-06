@@ -10,16 +10,18 @@ using Xamarin.Forms.Xaml;
 namespace AplusApp.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class RegistrationPage : ContentPage
+    public partial class ProjectsPage : ContentPage
     {
-        public RegistrationPage()
+        public ProjectsPage()
         {
             InitializeComponent();
+
+            NavigationPage.SetHasBackButton(this, false);
         }
 
-        private async void RegistrationBtn_Clicked(object sender, EventArgs e)
+        private async void TappedProject(object sender, ItemTappedEventArgs e)
         {
-            await Navigation.PushAsync(new ProjectsPage());
+            await Navigation.PushAsync(new OpenProjectPage(ProjectsList.SelectedItem.ToString()));
         }
     }
 }

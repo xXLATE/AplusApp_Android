@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplusApp.Pages.ProjectsPage">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" >
+            <Label
+                FontSize="20"
+                Text="Проекты"
+                TextColor="White"
+                Margin="25, 0, 0, 0"
+                HorizontalOptions="CenterAndExpand"/>
+            <ImageButton
+                Source="add.png" 
+                WidthRequest="25"
+                HeightRequest="25"
+                Margin="0, 0, 12, 0"
+                BackgroundColor="Transparent" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="projects" Type="{x:Type x:String}">
+                <x:String>Проект 1</x:String>
+                <x:String>Проект 2</x:String>
+                <x:String>Проект 3</x:String>
+                <x:String>Проект 4</x:String>
+                <x:String>Проект 5</x:String>
+                <x:String>Проект 6</x:String>
+                <x:String>Проект 7</x:String>
+                <x:String>Проект 8</x:String>
+                <x:String>Проект 9</x:String>
+                <x:String>Проект 10</x:String>
+                <x:String>Проект 11</x:String>
+                <x:String>Проект 12</x:String>
+                <x:String>Проект 13</x:String>
+                <x:String>Проект 14</x:String>
+                <x:String>Проект 15</x:String>
+                <x:String>Проект 16</x:String>
+                <x:String>Проект 17</x:String>
+                <x:String>Проект 18</x:String>
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <ListView
+            x:Name="ProjectsList"
+            SeparatorColor="Black"
+            ItemTapped="TappedProject"
+            ItemsSource="{StaticResource Key=projects}" />
+    </StackLayout>
+</ContentPage>
