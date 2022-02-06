@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace AplusApp.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class OpenProjectPage : TabbedPage
+    public partial class ImagesPage : ContentPage
     {
-        public string ProjectName { get; set; }
-
-        public OpenProjectPage(string projectName)
+        public ImagesPage()
         {
             InitializeComponent();
-
-            ProjectName = projectName;
-            this.BindingContext = this;
         }
     }
 }

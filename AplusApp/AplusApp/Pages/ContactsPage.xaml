@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplusApp.Pages.ContactsPage">
+
+    <StackLayout Spacing="30" Margin="40, 50" >
+        <StackLayout>
+            <Label
+                Text="Телефон"
+                TextColor="black" />
+            <Frame BorderColor="black" BackgroundColor="LightGray" CornerRadius="0" >
+                <Entry
+                    x:Name="Phone1"
+                    IsEnabled="False"
+                    Margin="-23"
+                    HeightRequest="40" />
+            </Frame>
+        </StackLayout>
+
+        <StackLayout>
+            <Label
+                Text="Телефон"
+                TextColor="black"/>
+            <Frame BorderColor="black" BackgroundColor="LightGray" CornerRadius="0" >
+                <Entry
+                    x:Name="Phone2"
+                    IsEnabled="False"
+                    Margin="-23"
+                    HeightRequest="40" />
+            </Frame>
+        </StackLayout>
+
+        <StackLayout>
+            <Label
+                Text="E-mail"
+                TextColor="black"/>
+            <Frame BorderColor="black" BackgroundColor="LightGray" CornerRadius="0" >
+                <Entry
+                    x:Name="Mail"
+                    IsEnabled="False"
+                    Margin="-23"
+                    IsPassword="True"
+                    HeightRequest="40" />
+            </Frame>
+        </StackLayout>
+
+        <StackLayout>
+            <Label
+                Text="Адрес"
+                TextColor="black"/>
+            <Frame BorderColor="black" BackgroundColor="LightGray" CornerRadius="0" >
+                <Entry
+                    x:Name="Address"
+                    IsEnabled="False"
+                    Margin="-23"
+                    IsPassword="True"
+                    HeightRequest="40" />
+            </Frame>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
