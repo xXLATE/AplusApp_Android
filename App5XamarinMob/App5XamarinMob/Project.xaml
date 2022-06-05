@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    x:Class="App5XamarinMob.ProjectPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:App5XamarinMob.TabbedPages"
+    xmlns:locala="clr-namespace:App5XamarinMob"
+    Visual="Material">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label
+                FontSize="21"
+                HorizontalOptions="CenterAndExpand"
+                Text="{x:Static locala:ProjectPage.Name}"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
+            <Label
+                Margin="0,0,19,0"
+                FontFamily="MaterialIconsFont"
+                FontSize="31"
+                HorizontalOptions="End"
+                Text="&#xe3c9;"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage Title="О проекте">
+        <ScrollView Padding="0,0">
+            <StackLayout>
+                <Label
+                    Padding="20"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Описание:"
+                    TextColor="Black"
+                    TextTransform="Uppercase"
+                    VerticalOptions="Start" />
+                <Label
+                    x:Name="ProjectDescriptionLbl"
+                    FontAttributes="Bold"
+                    FontSize="Small"
+                    HorizontalTextAlignment="Center"
+                    Text=""
+                    TextColor="Black"
+                    TextTransform="Uppercase" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <ContentPage Title="Картинки">
+        <StackLayout Padding="20">
+            <StackLayout Orientation="Horizontal">
+                <Image
+                    x:Name="Img1"
+                    HeightRequest="150"
+                    Source="Chudik.png"
+                    WidthRequest="180" />
+                <Image
+                    x:Name="Img2"
+                    HeightRequest="150"
+                    Source="Chudik.png"
+                    WidthRequest="180" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image
+                    x:Name="Img3"
+                    HeightRequest="150"
+                    Source="Chudik.png"
+                    WidthRequest="180" />
+                <Image
+                    x:Name="Img4"
+                    HeightRequest="150"
+                    Source="Chudik.png"
+                    WidthRequest="180" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image
+                    x:Name="Img5"
+                    HeightRequest="150"
+                    Source="Chudik.png"
+                    WidthRequest="180" />
+                <Image
+                    x:Name="Img6"
+                    HeightRequest="150"
+                    Source="Chudik.png"
+                    WidthRequest="180" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="Контакты">
+        <StackLayout Margin="50" Spacing="30">
+            <Frame BackgroundColor="LightGray">
+                <Label x:Name="TelephoneNumberLbl1" />
+            </Frame>
+            <Frame BackgroundColor="LightGray">
+                <Label x:Name="EmailLbl" />
+            </Frame>
+            <Frame BackgroundColor="LightGray">
+                <Label x:Name="AddressLbl" />
+            </Frame>
+        </StackLayout>
+    </ContentPage>
+
+    <!--<TabbedPage.Children>
+        <local:Page1 />
+        <local:Page2 />
+        <local:Page3 />
+    </TabbedPage.Children>-->
+</TabbedPage>

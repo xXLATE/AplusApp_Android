@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App5XamarinMob.TabbedPages.Page3"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:App5XamarinMob"
+    Title="Контакты">
+    <ContentPage.Content>
+        <StackLayout Padding="50">
+            <StackLayout>
+                <Label Text="Телефон" />
+                <Frame BorderColor="#000">
+                    <Label
+                        x:Name="TelephoneNumberLbl1"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="{Binding project.TelephoneNumber1}"
+                        VerticalOptions="Start" />
+                </Frame>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Телефон" />
+                <Frame BorderColor="#000">
+                    <Label
+                        x:Name="TelephoneNumberLbl2"
+                        BackgroundColor="LightGray"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="{Binding project.TelephoneNumber2}"
+                        VerticalOptions="Start" />
+                </Frame>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Email" />
+                <Frame BorderColor="#000">
+                    <Label
+                        x:Name="EmailLbl"
+                        BackgroundColor="Gray"
+                        HorizontalOptions="CenterAndExpand"
+                        Text=""
+                        VerticalOptions="Start" />
+                </Frame>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Адрес" />
+                <Frame BorderColor="#000">
+                    <Label
+                        x:Name="AddressLbl"
+                        BackgroundColor="#c9c9c9"
+                        HorizontalOptions="CenterAndExpand"
+                        Text=""
+                        VerticalOptions="Start" />
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

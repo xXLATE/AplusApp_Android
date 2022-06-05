@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App5XamarinMob.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Visual="Material">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <!--  изменения  -->
+            <Label
+                FontSize="21"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                Text="Проекты"
+                TextColor="White" />
+            <!--<ImageButton
+                Margin="0,0,19,0"
+                Aspect="AspectFit"
+                BackgroundColor="Transparent"
+                Clicked="ImageButton_Clicked"
+                HeightRequest="30"
+                HorizontalOptions="End"
+                Source="add.png"
+                WidthRequest="30" />-->
+            <Label
+                Margin="0,0,19,0"
+                FontFamily="MaterialIconsFont"
+                FontSize="31"
+                HorizontalOptions="End"
+                VerticalOptions="CenterAndExpand"
+                Text="&#xe145;"
+                TextColor="White">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <StackLayout>
+        <!--<Frame BackgroundColor="DodgerBlue" VerticalOptions="Start">
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    FontSize="21"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Проекты"
+                    TextColor="White" />
+                <ImageButton
+                    Aspect="AspectFit"
+                    HeightRequest="30"
+                    HorizontalOptions="End"
+                    Source="buttonPlus.jpg"
+                    WidthRequest="30" />
+            </StackLayout>
+        </Frame>-->
+        <ListView
+            x:Name="ProjectsLstview"
+            Margin="0,0"
+            ItemTapped="ProjectsLstview_ItemTapped"
+            RowHeight="50"
+            SeparatorColor="Gray">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" TextColor="#000" />
+                    <!--<Label Text="{Binding Name}" TextColor="#000" FontSize="16"></Label>-->
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

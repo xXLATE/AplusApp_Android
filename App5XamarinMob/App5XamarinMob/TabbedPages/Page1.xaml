@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App5XamarinMob.TabbedPages.Page1"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="О проекте">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                Padding="20"
+                FontAttributes="Bold"
+                FontSize="21"
+                HorizontalOptions="CenterAndExpand"
+                Text="Описание:"
+                TextTransform="Uppercase"
+                VerticalOptions="Start" />
+            <Label x:Name="ProjectDescriptionLbl" TextTransform="Uppercase" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App5XamarinMob.EditProjectPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Visual="Material">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label
+                FontSize="21"
+                Text="Изменить проект"
+                TextColor="White"
+                TextTransform="None"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"/>
+            <!--<ImageButton
+                x:Name="ProjectDeleteNavBtn"
+                Margin="0,0,10,0"
+                Aspect="AspectFit"
+                BackgroundColor="Transparent"
+                Clicked="ProjectDeleteNavBtn_Clicked"
+                HeightRequest="20"
+                HorizontalOptions="End"
+                Source="Delete.png"
+                WidthRequest="20" />-->
+            <Label
+                Margin="0,0,19,0"
+                FontFamily="MaterialIconsFont"
+                FontSize="31"
+                HorizontalOptions="End"
+                VerticalOptions="CenterAndExpand"
+                Text="&#xe872;"
+                TextColor="White">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ScrollView Margin="0,30">
+        <StackLayout Margin="20,30" Spacing="30">
+            <Entry
+                x:Name="ProjectNameTxt"
+                BackgroundColor="LightGray"
+                Placeholder="Имя проекта" />
+            <Editor
+                x:Name="ProjectDescriptionTxt"
+                AutoSize="TextChanges"
+                BackgroundColor="LightGray"
+                Placeholder="Описание" />
+            <Entry
+                x:Name="TelNumber1Txt"
+                BackgroundColor="LightGray"
+                Placeholder="Номер телефона №1" />
+            <Entry
+                x:Name="EmailTxt"
+                BackgroundColor="LightGray"
+                Placeholder="Email" />
+            <Entry
+                x:Name="AddressTxt"
+                BackgroundColor="LightGray"
+                Placeholder="Адрес" />
+            <StackLayout Orientation="Horizontal" Margin="0,0,0,50">
+                <Button
+                    x:Name="CancelBtn"
+                    BackgroundColor="DeepSkyBlue"
+                    Clicked="CancelBtn_Clicked"
+                    CornerRadius="20"
+                    HeightRequest="50"
+                    HorizontalOptions="Start"
+                    Text="Отмена"
+                    WidthRequest="150" />
+                <Button
+                    x:Name="EditBtn"
+                    BackgroundColor="DeepSkyBlue"
+                    Clicked="EditBtn_Clicked"
+                    CornerRadius="20"
+                    HeightRequest="50"
+                    HorizontalOptions="EndAndExpand"
+                    Text="Изменить"
+                    WidthRequest="150" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
