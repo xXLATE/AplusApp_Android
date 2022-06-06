@@ -18,24 +18,29 @@
         <Entry
                 x:Name="LoginRegEntry"
                 BackgroundColor="LightGray"
+                Text="{Binding Login}"
                 Placeholder="Логин" />
         <Entry
                 x:Name="EmailRegEntry"
                 BackgroundColor="LightGray"
+                Text="{Binding Email}"
                 Placeholder="E-mail" />
         <Entry
                 x:Name="PassRegEntry"
                 BackgroundColor="LightGray"
                 IsPassword="True"
+                Text="{Binding Password}"
                 Placeholder="Пароль" />
         <Entry
                 x:Name="PassConfirmRegEntry"
                 BackgroundColor="LightGray"
                 IsPassword="True"
+                Text="{Binding PasswordConfirm}"
                 Placeholder="Пароль" />
         <Button
             x:Name="RegBtn"
-            Clicked="RegBtn_Clicked"
+            Command="{Binding RegistrationCommand}"
+            CommandParameter="{Binding}"
             BackgroundColor="DeepSkyBlue"
             CornerRadius="20"
             HeightRequest="60"

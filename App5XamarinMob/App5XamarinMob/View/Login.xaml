@@ -20,19 +20,22 @@
                 x:Name="LoginEntry"
                 BackgroundColor="LightGray"
                 Placeholder="Логин"
+                Text="{Binding Login}"
                 VerticalOptions="CenterAndExpand" />
             <Entry
                 x:Name="PasswordEntry"
                 BackgroundColor="LightGray"
                 IsPassword="True"
                 Placeholder="Пароль"
+                Text="{Binding Password}"
                 VerticalOptions="CenterAndExpand" />
         </StackLayout>
         <StackLayout Orientation="Horizontal" VerticalOptions="End">
             <Button
-                x:Name="RigistrationPageBtn"
+                x:Name="RegistrationPageBtn"
                 BackgroundColor="DeepSkyBlue"
-                Clicked="RigistrationPageBtn_Clicked"
+                Command="{Binding RegistrationCommand}"
+                CommandParameter="{Binding}"
                 CornerRadius="30"
                 HeightRequest="50"
                 HorizontalOptions="Start"
@@ -40,8 +43,9 @@
             <Button
                 x:Name="LoginBtn"
                 BackgroundColor="DeepSkyBlue"
-                Clicked="LoginBtn_Clicked"
                 CornerRadius="30"
+                Command="{Binding LoginCommand}"
+                CommandParameter="{Binding}"
                 HeightRequest="50"
                 HorizontalOptions="EndAndExpand"
                 Text="Войти" />

@@ -32,7 +32,7 @@
                 TextColor="White"
                 VerticalOptions="CenterAndExpand">
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    <TapGestureRecognizer Command="{Binding DeleteCommand}" CommandParameter="{Binding}"/>
                 </Label.GestureRecognizers>
             </Label>
 
@@ -43,22 +43,27 @@
             <Entry
                 x:Name="ProjectNameTxt"
                 BackgroundColor="LightGray"
+                Text="{Binding Name}"
                 Placeholder="Имя проекта" />
             <Editor
                 x:Name="ProjectDescriptionTxt"
+                Text="{Binding Description}"
                 AutoSize="TextChanges"
                 BackgroundColor="LightGray"
                 Placeholder="Описание" />
             <Entry
                 x:Name="TelNumber1Txt"
                 BackgroundColor="LightGray"
+                Text="{Binding TelephoneNumber}"
                 Placeholder="Номер телефона №1" />
             <Entry
                 x:Name="EmailTxt"
+                Text="{Binding Email}"
                 BackgroundColor="LightGray"
                 Placeholder="Email" />
             <Entry
                 x:Name="AddressTxt"
+                Text="{Binding Addres}"
                 BackgroundColor="LightGray"
                 Placeholder="Адрес" />
             <StackLayout>
@@ -66,21 +71,24 @@
                     <Image
                         x:Name="img"
                         HeightRequest="200"
+                        Source="{Binding ImgPath}"
                         WidthRequest="100" />
                     <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
                         <Button
                             x:Name="AddImageGalBtn"
                             BackgroundColor="DeepSkyBlue"
-                            Clicked="AddImageBtn_Clicked"
                             CornerRadius="20"
                             HeightRequest="50"
+                            Command="{Binding TakePhotoCommand}"
+                            CommandParameter="{Binding}"
                             HorizontalOptions="FillAndExpand"
                             Text="Выбрать фото"
                             WidthRequest="150" />
                         <Button
                             x:Name="AddImageCamBtn"
                             BackgroundColor="DeepSkyBlue"
-                            Clicked="TakePhotoAsync"
+                            Command="{Binding DoPhotoCommand}"
+                            CommandParameter="{Binding}"
                             CornerRadius="20"
                             HeightRequest="50"
                             HorizontalOptions="FillAndExpand"
@@ -92,7 +100,8 @@
                     <Button
                         x:Name="CancelBtn"
                         BackgroundColor="DeepSkyBlue"
-                        Clicked="CancelBtn_Clicked"
+                        Command="{Binding CanselCommand}"
+                        CommandParameter="{Binding}"
                         CornerRadius="20"
                         HeightRequest="50"
                         HorizontalOptions="Start"
@@ -101,9 +110,10 @@
                     <Button
                         x:Name="EditBtn"
                         BackgroundColor="DeepSkyBlue"
-                        Clicked="EditBtn_Clicked"
                         CornerRadius="20"
                         HeightRequest="50"
+                        Command="{Binding SaveCommand}"
+                        CommandParameter="{Binding}"
                         HorizontalOptions="EndAndExpand"
                         Text="Изменить"
                         WidthRequest="150" />

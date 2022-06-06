@@ -12,7 +12,7 @@
             <Label
                 FontSize="21"
                 HorizontalOptions="CenterAndExpand"
-                Text="{x:Static locala:ProjectPage.Name}"
+                Text="{Binding Name}"
                 TextColor="White"
                 VerticalOptions="CenterAndExpand" />
             <Label
@@ -24,7 +24,7 @@
                 TextColor="White"
                 VerticalOptions="CenterAndExpand">
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    <TapGestureRecognizer Command="{Binding EditTapCommand}" CommandParameter="{Binding}"/>
                 </Label.GestureRecognizers>
             </Label>
         </StackLayout>
@@ -47,7 +47,7 @@
                     FontAttributes="Bold"
                     FontSize="Small"
                     HorizontalTextAlignment="Center"
-                    Text=""
+                    Text="{Binding Description}"
                     TextColor="Black"
                     TextTransform="Uppercase" />
             </StackLayout>
@@ -60,7 +60,7 @@
                 <Image
                     x:Name="Img1"
                     HeightRequest="150"
-                    Source="Chudik.png"
+                    Source="{Binding ImgPath}"
                     WidthRequest="180" />
                 <Image
                     x:Name="Img2"
@@ -98,13 +98,13 @@
     <ContentPage Title="Контакты">
         <StackLayout Margin="50" Spacing="30">
             <Frame BackgroundColor="LightGray">
-                <Label x:Name="TelephoneNumberLbl1" />
+                <Label x:Name="TelephoneNumberLbl1" Text="{Binding TelephoneNumber}"/>
             </Frame>
             <Frame BackgroundColor="LightGray">
-                <Label x:Name="EmailLbl" />
+                <Label x:Name="EmailLbl" Text="{Binding Email}"/>
             </Frame>
             <Frame BackgroundColor="LightGray">
-                <Label x:Name="AddressLbl" />
+                <Label x:Name="AddressLbl" Text="{Binding Addres}"/>
             </Frame>
         </StackLayout>
     </ContentPage>
