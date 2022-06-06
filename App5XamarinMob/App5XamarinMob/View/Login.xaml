@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App5XamarinMob.Login"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:App5XamarinMob"
+    Visual="Material">
+    <StackLayout
+        Margin="30,20"
+        Spacing="50"
+        VerticalOptions="Start">
+        <Image
+            x:Name="IconLoginImg"
+            Margin="0,0,0,20"
+            Aspect="AspectFit"
+            Scale="0.9"
+            Source="Resources/image.png" />
+        <StackLayout Spacing="30">
+            <Entry
+                x:Name="LoginEntry"
+                BackgroundColor="LightGray"
+                Placeholder="Логин"
+                Text="{Binding Login}"
+                VerticalOptions="CenterAndExpand" />
+            <Entry
+                x:Name="PasswordEntry"
+                BackgroundColor="LightGray"
+                IsPassword="True"
+                Placeholder="Пароль"
+                Text="{Binding Password}"
+                VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" VerticalOptions="End">
+            <Button
+                x:Name="RegistrationPageBtn"
+                BackgroundColor="DeepSkyBlue"
+                Command="{Binding RegistrationCommand}"
+                CommandParameter="{Binding}"
+                CornerRadius="30"
+                HeightRequest="50"
+                HorizontalOptions="Start"
+                Text="Зарегистрироваться" />
+            <Button
+                x:Name="LoginBtn"
+                BackgroundColor="DeepSkyBlue"
+                CornerRadius="30"
+                Command="{Binding LoginCommand}"
+                CommandParameter="{Binding}"
+                HeightRequest="50"
+                HorizontalOptions="EndAndExpand"
+                Text="Войти" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

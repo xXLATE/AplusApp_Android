@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App5XamarinMob.AddProjectPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:App5XamarinMob"
+    Visual="Material">
+
+    <NavigationPage.TitleView>
+        <Label
+            Padding="70,0"
+            FontSize="21"
+            Text="Создать проект"
+            TextColor="White"
+            TextTransform="None"
+            VerticalOptions="CenterAndExpand" />
+    </NavigationPage.TitleView>
+    <ScrollView Margin="0,30">
+        <StackLayout Margin="20,30" Spacing="30">
+            <Entry
+                x:Name="ProjectNameTxt"
+                BackgroundColor="LightGray"
+                Text="{Binding Name}"
+                Placeholder="Имя проекта" />
+            <Editor
+                x:Name="ProjectDescriptionTxt"
+                AutoSize="TextChanges"
+                Text="{Binding Description}"
+                BackgroundColor="LightGray"
+                Placeholder="Описание" />
+            <Entry
+                x:Name="TelNumber1Txt"
+                Text="{Binding TelephoneNumber}"
+                BackgroundColor="LightGray"
+                Placeholder="Номер телефона №1" />
+            <Entry
+                x:Name="EmailTxt"
+                BackgroundColor="LightGray"
+                Text="{Binding Email}"
+                Placeholder="Email" />
+            <Entry
+                x:Name="AddressTxt"
+                Text="{Binding Addres}"
+                BackgroundColor="LightGray"
+                Placeholder="Адрес" />
+
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image 
+                        x:Name="img"
+                        WidthRequest="100"
+                        HeightRequest="200" 
+                        Source="{Binding imgPath}"/>
+                    <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
+                        <Button
+                            x:Name="AddImageGalBtn"
+                            BackgroundColor="DeepSkyBlue"
+                            CornerRadius="20"
+                            HeightRequest="50"
+                            Command="{Binding DoPhotoCommand}"
+                            CommandParameter="{Binding}"
+                            HorizontalOptions="FillAndExpand"
+                            Text="Выбрать фото"
+                            WidthRequest="150" />
+                        <Button
+                            x:Name="AddImageCamBtn"
+                            BackgroundColor="DeepSkyBlue"
+                            Command="{Binding TakePhotoCommand}"
+                            CommandParameter="{Binding}"
+                            CornerRadius="20"
+                            HeightRequest="50"
+                            HorizontalOptions="FillAndExpand"
+                            Text="Сделать фото"
+                            WidthRequest="150" />
+                    </StackLayout>
+
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button
+                        x:Name="CancelBtn"
+                        BackgroundColor="DeepSkyBlue"
+                        Command="{Binding CanselCommand}"
+                        CommandParameter="{Binding}"
+                        CornerRadius="20"
+                        HeightRequest="50"
+                        HorizontalOptions="Start"
+                        Text="Отмена"
+                        WidthRequest="150" />
+                    <Button
+                        x:Name="AddBtn"
+                        BackgroundColor="DeepSkyBlue"
+                        Command="{Binding SaveCommand}"
+                        CommandParameter="{Binding}"
+                        CornerRadius="20"
+                        HeightRequest="50"
+                        HorizontalOptions="EndAndExpand"
+                        Text="Добавить"
+                        WidthRequest="150" />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

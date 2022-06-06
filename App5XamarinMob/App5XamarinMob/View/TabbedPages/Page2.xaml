@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App5XamarinMob.TabbedPages.Page2"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Картинки">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <StackLayout Orientation="Horizontal">
+                <Image
+                    x:Name="Img1"
+                    HeightRequest="170"
+                    Source="Chudik.png"
+                    WidthRequest="200" />
+                <Image
+                    x:Name="Img2"
+                    HeightRequest="170"
+                    Source="Chudik.png"
+                    WidthRequest="200" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image
+                    x:Name="Img3"
+                    HeightRequest="170"
+                    Source="Chudik.png"
+                    WidthRequest="200" />
+                <Image
+                    x:Name="Img4"
+                    HeightRequest="170"
+                    Source="Chudik.png"
+                    WidthRequest="200" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image
+                    x:Name="Img5"
+                    HeightRequest="170"
+                    Source="Chudik.png"
+                    WidthRequest="200" />
+                <Image
+                    x:Name="Img6"
+                    HeightRequest="170"
+                    Source="Chudik.png"
+                    WidthRequest="200" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
