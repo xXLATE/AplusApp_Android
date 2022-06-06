@@ -35,6 +35,7 @@ namespace App5XamarinMob
             AddressLbl.Text = project.Address;
             EmailLbl.Text = project.Email;
             TelephoneNumberLbl1.Text = project.TelephoneNumber1;
+            Img1.Source = project.ImagePath;
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)

@@ -8,13 +8,14 @@ namespace App5XamarinMob.Models
     [Table("Project1")]
     public class Project
     {
-        public Project(string name, string description, string telephoneNumber1, string email, string address)
+        public Project(string name, string description, string telephoneNumber1, string email, string address, string path)
         {
             Name = name;
             Description = description;
             TelephoneNumber1 = telephoneNumber1;
             Email = email;
             Address = address;
+            ImagePath = path;
         }
 
         public Project()
@@ -30,5 +31,6 @@ namespace App5XamarinMob.Models
         public string TelephoneNumber1 { get; set; }
         public string Email { get; set; }
         public string Address { get; set; }
+        public string ImagePath { get; set; }
     }
 }

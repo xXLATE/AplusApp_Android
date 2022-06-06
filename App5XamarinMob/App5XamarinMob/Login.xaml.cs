@@ -25,7 +25,6 @@ namespace App5XamarinMob
 
         private async void LoginBtn_Clicked(object sender, EventArgs e)
         {
-
             var lst = App.Db.GetClients();
             bool state = false;
 
@@ -33,7 +32,7 @@ namespace App5XamarinMob
             {
                 if (item.Login == LoginEntry.Text)
                 {
-                    if (item.Password == PasswordEntry.Text)
+                    if (item.Password == PasswordEntry.Text && state == false)
                     {
                         state = true;
                         await Navigation.PushModalAsync(new NavigationPage(new MainPage()));

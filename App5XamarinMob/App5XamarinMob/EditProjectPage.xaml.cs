@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using App5XamarinMob.Models;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,6 +15,7 @@ namespace App5XamarinMob
     public partial class EditProjectPage : ContentPage
     {
         readonly Project project;
+        private string path;
 
         public EditProjectPage(Project proj)
         {
@@ -28,6 +31,7 @@ namespace App5XamarinMob
             TelNumber1Txt.Text = project.TelephoneNumber1;
             EmailTxt.Text = project.Email;
             AddressTxt.Text = project.Address;
+            img.Source = project.ImagePath;
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
@@ -64,6 +68,8 @@ namespace App5XamarinMob
                 project.TelephoneNumber1 = TelNumber1Txt.Text;
                 project.Address = AddressTxt.Text;
                 project.Email = EmailTxt.Text;
+                if (path != null)
+                    project.ImagePath = path;
 
                 try
                 {
@@ -75,6 +81,52 @@ namespace App5XamarinMob
                 }
 
                 await Navigation.PopAsync();
+            }
+        }
+        async void TakePhotoAsync(object sender, EventArgs e)
+        {
+            try
+            {
+                var photo = await MediaPicker.CapturePhotoAsync(new MediaPickerOptions
+                {
+                    Title = $"xamarin.{DateTime.Now.ToString("dd.MM.yyyy_hh.mm.ss")}.png"
+                });
+
+                // для примера сохраняем файл в локальном хранилище
+                var newFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), photo.FileName);
+                using (var stream = await photo.OpenReadAsync())
+                using (var newStream = File.OpenWrite(newFile))
+                    await stream.CopyToAsync(newStream);
+
+                // загружаем в ImageView
+                path = photo.FullPath;
+                img.Source = photo.FullPath;
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Сообщение об ошибке", ex.Message, "OK");
+            }
+        }
+
+        private async void AddImageBtn_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                // выбираем фото
+                var photo = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
+                {
+                    Title = $"xamarin.{DateTime.Now.ToString("dd.MM.yyyy_hh.mm.ss")}.png"
+                });
+
+                var newFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), photo.FileName);
+
+                // загружаем в ImageView
+                path = photo.FullPath;
+                img.Source = photo.FullPath;
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Сообщение об ошибке", ex.Message, "OK");
             }
         }
     }

@@ -9,7 +9,7 @@ namespace App5XamarinMob
 {
     public partial class App : Application
     {
-        public const string DB_NAME = "clientsProj.db";
+        public const string DB_NAME = "bvhfb.db";
         public static CRUDOperation db;
         public static CRUDOperation Db
         {

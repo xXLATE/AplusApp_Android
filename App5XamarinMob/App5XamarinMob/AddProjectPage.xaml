@@ -3,6 +3,7 @@
     x:Class="App5XamarinMob.AddProjectPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:App5XamarinMob"
     Visual="Material">
 
     <NavigationPage.TitleView>
@@ -37,25 +38,52 @@
                 x:Name="AddressTxt"
                 BackgroundColor="LightGray"
                 Placeholder="Адрес" />
-            <StackLayout Orientation="Horizontal">
-                <Button
-                    x:Name="CancelBtn"
-                    BackgroundColor="DeepSkyBlue"
-                    Clicked="CancelBtn_Clicked"
-                    CornerRadius="20"
-                    HeightRequest="50"
-                    HorizontalOptions="Start"
-                    Text="Отмена"
-                    WidthRequest="150" />
-                <Button
-                    x:Name="AddBtn"
-                    BackgroundColor="DeepSkyBlue"
-                    Clicked="AddBtn_Clicked"
-                    CornerRadius="20"
-                    HeightRequest="50"
-                    HorizontalOptions="EndAndExpand"
-                    Text="Добавить"
-                    WidthRequest="150" />
+
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image x:Name="img" WidthRequest="100" HeightRequest="200"/>
+                    <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
+                        <Button
+                            x:Name="AddImageGalBtn"
+                            BackgroundColor="DeepSkyBlue"
+                            Clicked="AddImageBtn_Clicked"
+                            CornerRadius="20"
+                            HeightRequest="50"
+                            HorizontalOptions="FillAndExpand"
+                            Text="Выбрать фото"
+                            WidthRequest="150" />
+                        <Button
+                            x:Name="AddImageCamBtn"
+                            BackgroundColor="DeepSkyBlue"
+                            Clicked="TakePhotoAsync"
+                            CornerRadius="20"
+                            HeightRequest="50"
+                            HorizontalOptions="FillAndExpand"
+                            Text="Сделать фото"
+                            WidthRequest="150" />
+                    </StackLayout>
+
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button
+                        x:Name="CancelBtn"
+                        BackgroundColor="DeepSkyBlue"
+                        Clicked="CancelBtn_Clicked"
+                        CornerRadius="20"
+                        HeightRequest="50"
+                        HorizontalOptions="Start"
+                        Text="Отмена"
+                        WidthRequest="150" />
+                    <Button
+                        x:Name="AddBtn"
+                        BackgroundColor="DeepSkyBlue"
+                        Clicked="AddBtn_Clicked"
+                        CornerRadius="20"
+                        HeightRequest="50"
+                        HorizontalOptions="EndAndExpand"
+                        Text="Добавить"
+                        WidthRequest="150" />
+                </StackLayout>
             </StackLayout>
         </StackLayout>
     </ScrollView>

@@ -34,15 +34,15 @@ namespace App5XamarinMob
             //List.Projects.Add(new Project($"Проект{List.Projects.Count + 1}", $"Description{List.Projects.Count + 1}", "89047182492", "89047182402", "qwerty@mail.com", "Kazan"));
             //UpdateList();
 
-            await Navigation.PushAsync(new AddProjectPage()); await Navigation.PushAsync(new AddProjectPage());
-
-        }
-
-        private async void ImageButton_Clicked(object sender, EventArgs e)
-        {
-            //List.Projects.Add(new Project($"Проект{List.Projects.Count + 1}", $"Description{List.Projects.Count + 1}", "89047182492", "89047182402", "qwerty@mail.com", "Kazan"));
             await Navigation.PushAsync(new AddProjectPage());
+
         }
+
+        //private async void ImageButton_Clicked(object sender, EventArgs e)
+        //{
+        //    //List.Projects.Add(new Project($"Проект{List.Projects.Count + 1}", $"Description{List.Projects.Count + 1}", "89047182492", "89047182402", "qwerty@mail.com", "Kazan"));
+        //    await Navigation.PushAsync(new AddProjectPage());
+        //}
 
         public void UpdateList()
         {

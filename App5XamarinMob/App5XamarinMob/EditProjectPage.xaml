@@ -8,11 +8,11 @@
         <StackLayout Orientation="Horizontal">
             <Label
                 FontSize="21"
+                HorizontalOptions="CenterAndExpand"
                 Text="Изменить проект"
                 TextColor="White"
                 TextTransform="None"
-                HorizontalOptions="CenterAndExpand"
-                VerticalOptions="CenterAndExpand"/>
+                VerticalOptions="CenterAndExpand" />
             <!--<ImageButton
                 x:Name="ProjectDeleteNavBtn"
                 Margin="0,0,10,0"
@@ -28,9 +28,9 @@
                 FontFamily="MaterialIconsFont"
                 FontSize="31"
                 HorizontalOptions="End"
-                VerticalOptions="CenterAndExpand"
                 Text="&#xe872;"
-                TextColor="White">
+                TextColor="White"
+                VerticalOptions="CenterAndExpand">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
                 </Label.GestureRecognizers>
@@ -61,25 +61,53 @@
                 x:Name="AddressTxt"
                 BackgroundColor="LightGray"
                 Placeholder="Адрес" />
-            <StackLayout Orientation="Horizontal" Margin="0,0,0,50">
-                <Button
-                    x:Name="CancelBtn"
-                    BackgroundColor="DeepSkyBlue"
-                    Clicked="CancelBtn_Clicked"
-                    CornerRadius="20"
-                    HeightRequest="50"
-                    HorizontalOptions="Start"
-                    Text="Отмена"
-                    WidthRequest="150" />
-                <Button
-                    x:Name="EditBtn"
-                    BackgroundColor="DeepSkyBlue"
-                    Clicked="EditBtn_Clicked"
-                    CornerRadius="20"
-                    HeightRequest="50"
-                    HorizontalOptions="EndAndExpand"
-                    Text="Изменить"
-                    WidthRequest="150" />
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image
+                        x:Name="img"
+                        HeightRequest="200"
+                        WidthRequest="100" />
+                    <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
+                        <Button
+                            x:Name="AddImageGalBtn"
+                            BackgroundColor="DeepSkyBlue"
+                            Clicked="AddImageBtn_Clicked"
+                            CornerRadius="20"
+                            HeightRequest="50"
+                            HorizontalOptions="FillAndExpand"
+                            Text="Выбрать фото"
+                            WidthRequest="150" />
+                        <Button
+                            x:Name="AddImageCamBtn"
+                            BackgroundColor="DeepSkyBlue"
+                            Clicked="TakePhotoAsync"
+                            CornerRadius="20"
+                            HeightRequest="50"
+                            HorizontalOptions="FillAndExpand"
+                            Text="Сделать фото"
+                            WidthRequest="150" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Margin="0,0,0,50" Orientation="Horizontal">
+                    <Button
+                        x:Name="CancelBtn"
+                        BackgroundColor="DeepSkyBlue"
+                        Clicked="CancelBtn_Clicked"
+                        CornerRadius="20"
+                        HeightRequest="50"
+                        HorizontalOptions="Start"
+                        Text="Отмена"
+                        WidthRequest="150" />
+                    <Button
+                        x:Name="EditBtn"
+                        BackgroundColor="DeepSkyBlue"
+                        Clicked="EditBtn_Clicked"
+                        CornerRadius="20"
+                        HeightRequest="50"
+                        HorizontalOptions="EndAndExpand"
+                        Text="Изменить"
+                        WidthRequest="150" />
+                </StackLayout>
             </StackLayout>
         </StackLayout>
     </ScrollView>

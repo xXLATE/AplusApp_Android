@@ -47,7 +47,6 @@ namespace App5XamarinMob.db
         public int SaveClient(Client projectModel)
         {
             return db.Insert(projectModel);
-
         }
     }
 }
